@@ -7,6 +7,5 @@ public class Blackjack {
         Deck playingDeck = new Deck();
         playingDeck.fillDeck();
         playingDeck.Shuffle();
-
     }
 }
