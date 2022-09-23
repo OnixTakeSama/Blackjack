@@ -31,15 +31,24 @@ public class Blackjack {
                 System.out.println("How much would you like to bet ?");
                 playerBet = userInput.nextDouble();
             }
+
+            playerMoney -= playerBet;
+
             // Dealing
+            System.out.println("Dealing cards...");
             playerHand.drawCard(bankDeck);
             dealerHand.drawCard(bankDeck);
             playerHand.drawCard(bankDeck);
             dealerHand.drawCard(bankDeck);
 
-            while(true){
-                System.out.println("Your deck is : " + playerHand.toString());
-                System.out.println("");
+            String playerStop = "Stand";
+            String playerChoice = "";
+            Scanner playerChoiceIn = new Scanner(System.in);
+            while(!playerChoice.equals(playerStop)){
+                System.out.println("Your hand is : " + playerHand.showDeck());
+                System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
+                System.out.println("Do you want to Stand, Hit or Double ?");
+                playerChoice = playerChoiceIn.next();
             }
         }
         System.out.println("Game over!");

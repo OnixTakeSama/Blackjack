@@ -18,6 +18,6 @@ public class Cards {
 
     @Override
     public String toString(){
-        return this.suit.toString() + " - " + this.value.toString();
+        return this.getSuit() + " - " + this.getValue();
     }
 }
