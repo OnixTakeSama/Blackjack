@@ -21,14 +21,25 @@ public class Deck {
         Collections.shuffle(this.cardDeck);
     }
 
-    public String showDeck(){
-        String cardList = "";
-        int i = 0;
-        for (Cards card : this.cardDeck){
-            cardList += "\n" + i + " - " + card.toString();
-            i++;
+    public void showDeck(){
+        for (int i = 0; i < cardDeck.size();i++){
+            System.out.println(i + " - " + cardDeck.get(i));
         }
-        return cardList;
     }
 
+    public void removeCard(int i){
+        this.cardDeck.remove(i);
+    }
+
+    public Cards getCard(int i){
+        return this.cardDeck.get(i);
+    }
+    public void addCard(Deck addedCard){
+        this.cardDeck.add(addedCard.getCard(0));
+    }
+
+    public void drawCard(Deck cardFrome){
+        this.cardDeck.add(cardFrome.getCard(0));
+        cardFrome.removeCard(0);
+    }
 }
