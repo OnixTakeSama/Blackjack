@@ -21,10 +21,12 @@ public class Deck {
         Collections.shuffle(this.cardDeck);
     }
 
-    public void showDeck(){
+    public String showDeck(){
+        String res = "";
         for (int i = 0; i < cardDeck.size();i++){
-            System.out.println(i + " - " + cardDeck.get(i));
+            res += cardDeck.get(i) + " | ";
         }
+        return res;
     }
 
     public void removeCard(int i){
@@ -43,4 +45,7 @@ public class Deck {
         cardFrome.removeCard(0);
     }
 
+    public int deckValue(Deck deck){
+
+    }
 }

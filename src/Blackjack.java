@@ -49,6 +49,11 @@ public class Blackjack {
                 System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
                 System.out.println("Do you want to Stand, Hit or Double ?");
                 playerChoice = playerChoiceIn.next();
+                if (playerChoice.equals("Hit")){
+                    playerHand.drawCard(bankDeck);
+                    System.out.println("Your hand is : " + playerHand.showDeck());
+                }
+                break;
             }
         }
         System.out.println("Game over!");
