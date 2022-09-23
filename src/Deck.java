@@ -42,4 +42,5 @@ public class Deck {
         this.cardDeck.add(cardFrome.getCard(0));
         cardFrome.removeCard(0);
     }
+
 }
