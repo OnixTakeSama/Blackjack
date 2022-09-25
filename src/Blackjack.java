@@ -43,17 +43,45 @@ public class Blackjack {
 
             String playerStop = "Stand";
             String playerChoice = "";
+            boolean doubled = false;
             Scanner playerChoiceIn = new Scanner(System.in);
-            while(!playerChoice.equals(playerStop)){
-                System.out.println("Your hand is : " + playerHand.showDeck());
+            while(!playerChoice.equals(playerStop) && playerHand.deckValue() < 21 && doubled != true){
+                System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
                 System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
                 System.out.println("Do you want to Stand, Hit or Double ?");
                 playerChoice = playerChoiceIn.next();
                 if (playerChoice.equals("Hit")){
                     playerHand.drawCard(bankDeck);
-                    System.out.println("Your hand is : " + playerHand.showDeck());
+                    System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
+                    System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
+                } else {
+                    playerHand.drawCard(bankDeck);
+                    System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
+                    System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
+                    playerBet = playerBet * 2;
+                    doubled = true;
                 }
-                break;
+            }
+            while (dealerHand.deckValue() < 17){
+                dealerHand.drawCard(bankDeck);
+                System.out.println("Dealer's hand is : " + dealerHand.showDeck() + " Total Value : " + dealerHand.deckValue());
+            }
+            System.out.println("Final results : ");
+            System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
+            System.out.println("Dealer's hand is : " + dealerHand.showDeck() + " Total Value : " + dealerHand.deckValue());
+            if (playerHand.deckValue() > 21){
+                System.out.println("You busted ! Better luck next time !");
+            } else if (dealerHand.deckValue() > 21){
+                System.out.println("Dealer has bust ! You won !");
+                playerMoney += playerBet * 2;
+            } else if(playerHand.deckValue() < dealerHand.deckValue()){
+                System.out.println("Dealer's hand is better than yours ! You lost !");
+            } else if(playerHand.deckValue() > dealerHand.deckValue()){
+                System.out.println("Your hand is better than dealer's one ! You won !");
+                playerMoney += playerBet * 2;
+            } else if (playerHand.deckValue() == dealerHand.deckValue()){
+                System.out.println("Push !");
+                playerMoney += playerBet;
             }
         }
         System.out.println("Game over!");
