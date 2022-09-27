@@ -74,4 +74,8 @@ public class Deck {
         }
         return value;
     }
+
+    public void emptyDeck(){
+        this.cardDeck = new ArrayList<>();
+    }
 }

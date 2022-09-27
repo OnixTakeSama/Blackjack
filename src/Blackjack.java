@@ -45,7 +45,7 @@ public class Blackjack {
             String playerChoice = "";
             boolean doubled = false;
             Scanner playerChoiceIn = new Scanner(System.in);
-            while(!playerChoice.equals(playerStop) && playerHand.deckValue() < 21 && doubled != true){
+            while(!playerChoice.equals(playerStop) && playerHand.deckValue() < 21 && !doubled){
                 System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
                 System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
                 System.out.println("Do you want to Stand, Hit or Double ?");
@@ -54,7 +54,7 @@ public class Blackjack {
                     playerHand.drawCard(bankDeck);
                     System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
                     System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
-                } else {
+                } else if (playerChoice.equals("Double")){
                     playerHand.drawCard(bankDeck);
                     System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
                     System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
@@ -83,6 +83,10 @@ public class Blackjack {
                 System.out.println("Push !");
                 playerMoney += playerBet;
             }
+            playerHand.emptyDeck();
+            dealerHand.emptyDeck();
+            bankDeck.emptyDeck();
+
         }
         System.out.println("Game over!");
     }
