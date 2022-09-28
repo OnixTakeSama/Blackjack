@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blackjack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blackjack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Values.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Values.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +66,10 @@
       <workItem from="1664104039266" duration="2405000" />
       <workItem from="1664134794008" duration="61000" />
       <workItem from="1664179332961" duration="3448000" />
+      <workItem from="1664269990641" duration="186000" />
+      <workItem from="1664271157753" duration="33000" />
+      <workItem from="1664271360894" duration="4000" />
+      <workItem from="1664372688565" duration="4081000" />
     </task>
     <task id="LOCAL-00001" summary="First Commmit (beginning of the game)">
       <created>1663800454909</created>
@@ -117,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664134816667</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Main improvements">
+      <created>1664270109511</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664270109511</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

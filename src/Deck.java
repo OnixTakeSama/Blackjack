@@ -62,7 +62,6 @@ public class Deck {
                 case JACK: value += 10; break;
                 case QUEEN: value += 10; break;
                 case KING: value += 10; break;
-                case ACE: aces += 1; break;
             }
             for (int i = 0; i<aces;i++){
                 if (value > 10){
@@ -77,5 +76,9 @@ public class Deck {
 
     public void emptyDeck(){
         this.cardDeck = new ArrayList<>();
+    }
+
+    public int deckSize(){
+        return this.cardDeck.size();
     }
 }
