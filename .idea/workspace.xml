@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9baae95-3f1f-4fac-91cb-2e67e1d24c46" name="Changes" comment="More deck functions and main improvements">
+    <list default="true" id="e9baae95-3f1f-4fac-91cb-2e67e1d24c46" name="Changes" comment="Finishing the project">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blackjack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blackjack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Suits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Suits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Values.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Values.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,7 @@
       <workItem from="1664292619154" duration="260000" />
       <workItem from="1668007595001" duration="7000" />
       <workItem from="1679681113822" duration="139000" />
-      <workItem from="1679681261295" duration="2352000" />
+      <workItem from="1679681261295" duration="2489000" />
     </task>
     <task id="LOCAL-00001" summary="First Commmit (beginning of the game)">
       <created>1663800454909</created>
@@ -119,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664135100630</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finishing the project">
+      <created>1679683657804</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679683657804</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +149,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commmit (beginning of the game)" />
     <MESSAGE value="More deck functions and main improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="More deck functions and main improvements" />
+    <MESSAGE value="Finishing the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing the project" />
   </component>
 </project>

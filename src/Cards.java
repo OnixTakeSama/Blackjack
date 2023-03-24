@@ -20,4 +20,5 @@ public class Cards {
     public String toString(){
         return this.getSuit() + " - " + this.getValue();
     }
+
 }
