@@ -1,4 +1,6 @@
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.*;
 
 public class Blackjack {
 
@@ -84,6 +86,17 @@ public class Blackjack {
                 playerMoney += playerBet;
             }
 
+            // Empty dealer's hand
+            dealerHand.clear();
+
+            // Empty player's hand
+            playerHand.clear();
+
+            // Reset bank deck
+            bankDeck.clear();
+
+            bankDeck.fillDeck();
+            bankDeck.Shuffle();
         }
         System.out.println("Game over!");
     }

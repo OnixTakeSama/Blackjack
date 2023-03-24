@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9baae95-3f1f-4fac-91cb-2e67e1d24c46" name="Changes" comment="More deck functions and main improvements">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Blackjack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blackjack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Deck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +46,8 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -62,6 +65,10 @@
       <workItem from="1663947924337" duration="1275000" />
       <workItem from="1663954098454" duration="519000" />
       <workItem from="1664104039266" duration="2405000" />
+      <workItem from="1664292619154" duration="260000" />
+      <workItem from="1668007595001" duration="7000" />
+      <workItem from="1679681113822" duration="139000" />
+      <workItem from="1679681261295" duration="2352000" />
     </task>
     <task id="LOCAL-00001" summary="First Commmit (beginning of the game)">
       <created>1663800454909</created>
@@ -105,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663954579195</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="More deck functions and main improvements">
+      <created>1664135100630</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664135100630</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
