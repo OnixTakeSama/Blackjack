@@ -34,29 +34,41 @@ public class Blackjack {
                 playerBet = userInput.nextDouble();
             }
 
+            String playerStop = "stand" ;
+            String playerChoice = "";
+            boolean doubled = false;
+            boolean insurance = false;
+            double insuranceValue = playerBet / 2.00;
+            Scanner playerChoiceIn = new Scanner(System.in);
+
             playerMoney -= playerBet;
 
             // Dealing
             System.out.println("Dealing cards...");
             playerHand.drawCard(bankDeck);
+            System.out.println(playerHand.deckSize());
             dealerHand.drawCard(bankDeck);
             playerHand.drawCard(bankDeck);
+            if (dealerHand.deckValue() == 11){
+                System.out.println("Dealer's has 11, do you want to take an insurance ? Yes / No (Cost half of your bet)");
+                if (playerChoice.toLowerCase().equals("yes")){
+                    insurance = true;
+                    playerMoney -= insuranceValue;
+                    System.out.println("You paid: " + insuranceValue + " for the insurance !");
+                }
+            }
+            System.out.println(playerHand.deckSize());
             dealerHand.drawCard(bankDeck);
-
-            String playerStop = "Stand";
-            String playerChoice = "";
-            boolean doubled = false;
-            Scanner playerChoiceIn = new Scanner(System.in);
-            while(!playerChoice.equals(playerStop) && playerHand.deckValue() < 21 && !doubled){
+            while(!playerChoice.toLowerCase().equals(playerStop) && playerHand.deckValue() < 21 && !doubled){
                 System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
                 System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
                 System.out.println("Do you want to Stand, Hit or Double ?");
                 playerChoice = playerChoiceIn.next();
-                if (playerChoice.equals("Hit")){
+                if (playerChoice.toLowerCase().equals("hit")){
                     playerHand.drawCard(bankDeck);
                     System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
                     System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
-                } else if (playerChoice.equals("Double")){
+                } else if (playerChoice.toLowerCase().equals("double")){
                     playerHand.drawCard(bankDeck);
                     System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
                     System.out.println("Dealer's hand is : " + dealerHand.getCard(0) + " + HIDDEN CARD");
@@ -71,7 +83,16 @@ public class Blackjack {
             System.out.println("Final results : ");
             System.out.println("Your hand is : " + playerHand.showDeck() + " Total Value : " + playerHand.deckValue());
             System.out.println("Dealer's hand is : " + dealerHand.showDeck() + " Total Value : " + dealerHand.deckValue());
-            if (playerHand.deckValue() > 21){
+            if (playerHand.deckValue() == 21 && playerHand.deckSize() == 2 && !(dealerHand.deckValue() == 21 && dealerHand.deckSize() != 2)){
+                System.out.println("You won with a blackjack ! Winner winner, chicken dinner !");
+                playerMoney += playerBet * 2.5;
+            }
+            else if (playerHand.deckValue() == 21 && playerHand.deckSize() == 2 && bankDeck.deckValue() == 21 && bankDeck.deckSize() == 2){
+                System.out.println("Both player and dealer has a blackjack ! It's a tie... ");
+                playerMoney += playerBet;
+            } else if (playerHand.deckValue() < 21 && dealerHand.deckValue() == 21 && dealerHand.deckSize() == 2 && insurance) {
+                System.out.println("Dealer's has a blackjack ! You lost, but you get twice the insurance !");
+            } else if (playerHand.deckValue() > 21){
                 System.out.println("You busted ! Better luck next time !");
             } else if (dealerHand.deckValue() > 21){
                 System.out.println("Dealer has bust ! You won !");

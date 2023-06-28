@@ -105,4 +105,8 @@ public class Deck{
         }
         return value;
     }
+
+    public int deckSize(){
+        return this.cardDeck.size();
+    }
 }
